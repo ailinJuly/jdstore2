@@ -13,8 +13,12 @@
         </div>
         <div>数量：<%= @product.quantity %>  </div>
         <div class="product-price">  ￥ <%= @product.price %>  </div>
+        <% if @product.quantity>0 %>
         <div class="pull-right">
             <%= link_to("加入购物车",add_to_cart_product_path(@product),:method =>:post,:class=>"btn btn-danger btn-lg") %>
         </div>
+        <% else %>
+        商品已经下架！
+        <% end %>
     </div>
 </div>
