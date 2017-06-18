@@ -9,16 +9,18 @@
         </tr>
       </thead>
       <tbody>
+
         <% @product_lists.each do |product_list| %>
-        <tr>
-          <td>
-            <%= product_list.product_name %>
-          </td>
-          <td>
-            <%= product_list.product_price %>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <%= product_list.product_name%>
+            </td>
+            <td>
+              <%= product_list.product_price%>
+            </td>
+          </tr>
         <% end %>
+
       </tbody>
     </table>
     <div class="total clearfix">
@@ -26,21 +28,24 @@
         总计 <%= @order.total %>RMB
       </span>
     </div>
+
     <hr>
+
     <h2>寄送资讯</h2>
+
     <table class="table table-striped table-bordered">
       <tbody>
           <tr>
             <td>订购人</td>
           </tr>
           <tr>
-            <td><%= @order.billing_name%></td> - <td><%= @order.billing_address %></td>
+            <td><%= @order.billing_name%> - <%= @order.billing_address %></td>
           </tr>
           <tr>
             <td>收件人</td>
           </tr>
           <tr>
-            <td><%= @order.shipping_name %></td> - <td><%= @order.shipping_address %></td>
+            <td><%= @order.shipping_name %> - <%= @order.shipping_address %></td>
           </tr>
       </tbody>
     </table>
