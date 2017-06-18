@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
      @order = Order.new(order_params)
      @order.user = current_user
      @order.total = current_cart.total_price
+     
      if @order.save
       redirect_to order_path(@order)
      else
