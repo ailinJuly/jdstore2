@@ -18,7 +18,11 @@ Rails.application.routes.draw do
       post :add_to_cart
     end
   end
-
+  resources :products do
+    collection do
+      get :search
+    end
+  end
 
   resources :carts do
     collection do
