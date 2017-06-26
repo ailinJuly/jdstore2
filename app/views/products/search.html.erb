@@ -19,7 +19,8 @@
                           <div class="pull-right">
                               发布时间：<%= product.created_at.to_date %>
                           </div>
-                          <p><%= link_to(render_highlight_content(product.@query_string),product_path(product)) %></p>
+                          <p><%= link_to(render_highlight_content(product,@query_string),product_path(product)) %></p>
+
                         </div>
                       </div>
                     <% end %>
